@@ -258,8 +258,8 @@ in {
         '';
 
         source = settingsFormat.generate ("config-${cfgFileSuffix}.toml") ({
-          theme = cfg.theme;
-          icons = cfg.icons;
+          theme.theme = cfg.theme;
+          icons.icons = cfg.icons;
           block = cfg.blocks;
         } // cfg.settings);
       })) cfg.bars;
